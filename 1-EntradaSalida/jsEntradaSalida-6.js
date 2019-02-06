@@ -7,23 +7,27 @@ function sumar()
 	var b;
 	var suma;
 
-	a = document.getElementById('numeroUno').value;  
-	b = document.getElementById('numeroDos').value;  //<este funciona!!>
+	a = document.getElementById('numeroUno').value;
+	a = parseInt(a);  
+	b = document.getElementById('numeroDos').value;
+	b = parseInt(b);
+
+	suma = a + b;
+
+	alert("El resultado es: " + suma);
 
 	//a = numeroUno.value;  
 	//b = numeroDos.value;  <este también!!>
 
-	//1a = parseInt(numeroUno); <no>
-	//1b = parseInt(numeroDos); <no>
+	//a = parseInt(numeroUno); <no>
+	//b = parseInt(numeroDos); <no>
 	
-	//2parseInt(numeroUno) = a; <no>
-	//2parseInt(numeroDos) = b; <no>
+	//parseInt(numeroUno) = a; <no>
+	//parseInt(numeroDos) = b; <no>
 
 	//suma = a + b; <no>
 
-	suma = parseInt(a) + parseInt(b);
-
-	alert("El resultado es: " + suma);
+	//suma = parseInt(a) + parseInt(b); <no>
 
 }
 

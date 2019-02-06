@@ -9,12 +9,14 @@ function sumar()
 	var sumar;
 
 	a = document.getElementById('numeroUno').value;
+	a = parseInt(a);
 	b = document.getElementById('numeroDos').value;
+	b = parseInt(b);
 
 	//a = document.getElementById('numeroUno');
 	//b = document.getElementById('numeroDos'); <falto el ".value" en ambos>
 
-	sumar = parseInt(a) + parseInt(b);
+	sumar = a + b;
 	alert("El resultado es " + sumar);
 
 }
@@ -26,9 +28,12 @@ function restar()
 	var restar;
 
 	a = document.getElementById('numeroUno').value;
+	a = parseInt(a);
 	b = document.getElementById('numeroDos').value;
+	b = parseInt(b);
 
-	restar = parseInt(a) - parseInt(b);
+	restar = a - b;
+	
 	alert("El resultado es " + restar);
 }
 
@@ -39,9 +44,12 @@ function multiplicar()
 	var multiplicar;
 
 	a = document.getElementById('numeroUno').value;
+	a = parseInt(a);
 	b = document.getElementById('numeroDos').value;
+	b = parseInt(b);
 
-	multiplicar = parseInt(a) * parseInt(b);
+	multiplicar = a * b;
+
 	alert("El resultado es " + multiplicar);
 }
 
@@ -52,9 +60,12 @@ function dividir()
 	var dividir;
 
 	a = document.getElementById('numeroUno').value;
+	a = parseInt(a);
 	b = document.getElementById('numeroDos').value;
+	b = parseInt(b);
 
-	dividir = parseInt(a) / parseInt(b);
+	dividir = a / b;
+
 	alert("El resultado es " + dividir);
 }
 

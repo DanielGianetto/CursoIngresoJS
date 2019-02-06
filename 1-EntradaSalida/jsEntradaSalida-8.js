@@ -9,12 +9,14 @@ function SacarResto()
 	var resto;
 
 	a = document.getElementById('numeroDividendo').value;
+	a = parseInt(a);
 	b = document.getElementById('numeroDivisor').value;
-	
+	b = parseInt(b);
+
 	//a = document.getElementById('numeroDividendo'); <me volvi a comer el ".value".
 	//b = document.getElementById('numeroDivisor');
 
-	resto = parseInt(a) / parseInt(b);
+	resto = a / b;
 
 	alert("El resto es " + resto);
 }
