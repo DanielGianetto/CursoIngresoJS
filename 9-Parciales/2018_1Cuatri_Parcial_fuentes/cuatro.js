@@ -39,9 +39,6 @@ else if(num1 < num2)
 //descuento adicional de 15%, si el pago es con tarjeta y no en efectivo
 //al precio final se le agrega un 10% de recargo.
 
-//var producto1;
-//var producto2;
-
 var productos;
 var precio;
 var descuento1;
@@ -49,11 +46,6 @@ var descuento2;
 var recargo;
 var precioFinal;
 var medioDePago;
-
-/*producto1 = prompt("Ingrese el precio del primer producto: ");
-producto1 = parseInt(producto1);
-producto2 = prompt("Ingrese el precio del segundo producto: ");
-producto2 = parseInt(producto2);*/
 
 productos = prompt("Cantidad de productos: ");
 productos = parseInt(productos);
@@ -89,7 +81,6 @@ else if(medioDePago == "Efectivo" || medioDePago == "efectivo")
 {
 	precioFinal = precio;
 }
-
 
 alert("Total a pagar: $" + precioFinal);
 

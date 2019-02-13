@@ -24,6 +24,8 @@ else
 	}
 }
 
+
+
 /*
 if(pressButton && (nota == 9 || nota == 10))
 {
