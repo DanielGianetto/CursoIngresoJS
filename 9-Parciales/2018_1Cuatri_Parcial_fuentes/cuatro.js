@@ -1,6 +1,6 @@
 function mostrar()
 {
-
+/*
 var num1;
 var num2;
 var suma;
@@ -32,6 +32,85 @@ else if(num1 < num2)
 	}
 	//alert("Resultado: " + suma);
 }
+*/
+
+//al realizar una compra, si compra de mas de dos productos se
+//realiza un descuento del 10% y si supera los $2000 se agrega un 
+//descuento adicional de 15%, si el pago es con tarjeta y no en efectivo
+//al precio final se le agrega un 10% de recargo.
+
+//var producto1;
+//var producto2;
+
+var productos;
+var precio;
+var descuento1;
+var descuento2;
+var recargo;
+var precioFinal;
+var medioDePago;
+
+/*producto1 = prompt("Ingrese el precio del primer producto: ");
+producto1 = parseInt(producto1);
+producto2 = prompt("Ingrese el precio del segundo producto: ");
+producto2 = parseInt(producto2);*/
+
+productos = prompt("Cantidad de productos: ");
+productos = parseInt(productos);
+
+precio = prompt("Ingresar precio: ");
+precio = parseInt(precio);
+
+medioDePago = prompt("¿Efectivo o Tarjeta?");
+
+if(productos >= 2)
+{
+	descuento1 = (precio * 10)/100;
+	descuento1 = parseInt(descuento1);
+	precioFinal = precio-descuento1;
+
+	if(precio >= 2000)
+	{
+		descuento1 = (precio * 10)/100;
+		descuento1 = parseInt(descuento1);
+		descuento2 = (precio * 15)/100;
+		descuento2 = parseInt(descuento2);
+		precioFinal = (precio-descuento1)-descuento2;
+	}
+
+		if(medioDePago == "Tarjeta" || medioDePago == "tarjeta")
+		{
+			recargo = (precio * 10)/100;
+			recargo = parseInt(recargo);
+			precioFinal = precioFinal+recargo;
+		}
+} 
+
+alert("Total a pagar: $" + precioFinal);
+
+/*if(producto1 > 0 && producto2 > 0)
+{
+	precioFinal = precio-descuento1;
+	alert("Total a pagar: $" + precioFinal);
+		if(medioDePago == "Tarjeta")
+		{
+			precioFinal = (precio-descuento1)+recargo;
+			alert("Total a pagar con tarjeta: $" + precioFinal);
+		}
+}
+if(precio >= 2000)
+{
+	precioFinal = (precio-descuento1)-descuento2;
+	alert("Total a pagar con descuento del 15%: $" + precioFinal);
+		if(medioDePago == "Tarjeta")
+		{
+			precioFinal = (precio-descuento1-descuento2)+recargo;
+			alert("Total a pagar con tarjeta: $" + precioFinal);
+		}
+}*/
+
+
+		
 
 
 

@@ -26,6 +26,4 @@ precioFinal = parseInt(precioFinal);
 
 alert("el precio del producto en efectivo es: $" +precioTarjeta+ ", con tarjeta tiene un recargo del 10% que seria $"+recargo+" de recargo, costandole final: $"+precioFinal);
 
-
- 
 }
