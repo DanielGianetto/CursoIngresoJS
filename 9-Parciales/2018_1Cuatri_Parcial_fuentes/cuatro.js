@@ -76,15 +76,20 @@ if(productos >= 2)
 		descuento2 = (precio * 15)/100;
 		descuento2 = parseInt(descuento2);
 		precioFinal = (precio-descuento1)-descuento2;
-	}
-
-		if(medioDePago == "Tarjeta" || medioDePago == "tarjeta")
-		{
-			recargo = (precio * 10)/100;
-			recargo = parseInt(recargo);
-			precioFinal = precioFinal+recargo;
-		}
+	}		
 } 
+
+if(medioDePago == "Tarjeta" || medioDePago == "tarjeta")
+{
+	recargo = (precio * 10)/100;
+	recargo = parseInt(recargo);
+	precioFinal = precioFinal+recargo;	
+}
+else if(medioDePago == "Efectivo" || medioDePago == "efectivo")
+{
+	precioFinal = precio;
+}
+
 
 alert("Total a pagar: $" + precioFinal);
 
