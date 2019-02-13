@@ -83,7 +83,7 @@ if(medioDePago == "Tarjeta" || medioDePago == "tarjeta")
 {
 	recargo = (precio * 10)/100;
 	recargo = parseInt(recargo);
-	precioFinal = precioFinal+recargo;	
+	precioFinal = precio+recargo;	
 }
 else if(medioDePago == "Efectivo" || medioDePago == "efectivo")
 {

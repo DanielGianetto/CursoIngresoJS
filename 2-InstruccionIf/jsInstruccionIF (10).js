@@ -12,6 +12,23 @@ if(pressButton && (nota == 9 || nota == 10))
 {
 	alert("EXCELENTE: " + nota);
 }
+else
+{
+	if(pressButton && nota >= 4)	
+	{
+		alert("APROBÓ: " + nota);
+	}
+	else
+	{
+		alert("Vamos, la proxima se puede: " + nota);
+	}
+}
+
+/*
+if(pressButton && (nota == 9 || nota == 10))
+{
+	alert("EXCELENTE: " + nota);
+}
 else if(pressButton && nota >= 4 )
 {
 	alert("APROBÓ: " + nota);
@@ -19,7 +36,6 @@ else if(pressButton && nota >= 4 )
 else
 {
 	alert("Vamos, la proxima se puede: " + nota);
-}
-
+}*/
 
 }//FIN DE LA FUNCIÓN

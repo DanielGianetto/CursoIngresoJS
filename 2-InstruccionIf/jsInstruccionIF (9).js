@@ -2,7 +2,13 @@ function mostrar()
 {
 	//Genero el número RANDOM entre 1 y 10 
 
-	//var numeroRandom;
+var numeroRandom;
+var pressButton;
+
+numeroRandom = Math.floor(Math.random() * 10) + 1;
+console.log(numeroRandom);
+
+//var numeroRandom;
 
 	//numeroRandom = Random(1,10);
 
@@ -29,21 +35,15 @@ function mostrar()
 	}*/
 //------
 
-var numero;
-var pressButton;
-
+/*
 //numero = (int) (Math.random() * 10) + 1;
 pressButton = document.getElementsByClassName("MiBotonUTNnav");
-numero = Math.floor(Math.random() * 10) + 1; //Si se pone "(Math.random() * 10) + 1" dara como resultado un numero aleatorio 
+numeroRandom = Math.floor(Math.random() * 10) + 1; //Si se pone "(Math.random() * 10) + 1" dara como resultado un numero aleatorio 
 											 //con decimales,para que sea entero hay que poner "Math.floor(Math.random() * 10) + 1"
 if(pressButton)
 {
-	alert(numero);
+	alert(numeroRandom);
 }
-
-
-	
-
-
+*/
 
 }//FIN DE LA FUNCIÓN
