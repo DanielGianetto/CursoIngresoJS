@@ -2,6 +2,7 @@ function mostrar()
 {
 //tomo la edad  
 var laHora = document.getElementById('hora').value;
+var mensaje;
 
 switch(laHora)
 {
@@ -10,7 +11,7 @@ switch(laHora)
 	case "9":
 	case "10":
 	case "11":
-		alert("Es de mañana");
+		mensaje = "Es de mañana";
 		break;
 	case "12":
 	case "13":
@@ -20,13 +21,12 @@ switch(laHora)
 	case "17":
 	case "18":
 	case "19":
-		alert("Es de tarde");
+		mensaje = "Es de tarde";
 		break;
 	case "20":
 	case "21":
 	case "22":
 	case "23":
-	case "24":
 	case "0":
 	case "1":
 	case "2":
@@ -34,9 +34,9 @@ switch(laHora)
 	case "4":
 	case "5":
 	case "6":
-		alert("Es de noche");
+		mensaje = "Es de noche";
 		break;
-
 }
+alert(mensaje);
 
 }//FIN DE LA FUNCIÓN
