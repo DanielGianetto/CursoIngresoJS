@@ -39,50 +39,55 @@ else if(num1 < num2)
 //descuento adicional de 15%, si el pago es con tarjeta y no en efectivo
 //al precio final se le agrega un 10% de recargo.
 
-var productos;
-var precio;
-var descuento1;
-var descuento2;
-var recargo;
-var precioFinal;
-var medioDePago;
+	var productos;
+	var precio;
+	var descuento1;
+	var descuento2;
+	var recargo;
+	var precioFinal;
+	var medioDePago;
 
-productos = prompt("Cantidad de productos: ");
-productos = parseInt(productos);
+	productos = prompt("Cantidad de productos: ");
+	productos = parseInt(productos);
 
-precio = prompt("Ingresar precio: ");
-precio = parseInt(precio);
+	precio = prompt("Ingresar precio: ");
+	precio = parseInt(precio);
 
-medioDePago = prompt("¿Efectivo o Tarjeta?");
-
-if(productos >= 2)
-{
 	descuento1 = (precio * 10)/100;
 	descuento1 = parseInt(descuento1);
-	precioFinal = precio-descuento1;
 
-	if(precio >= 2000)
-	{
-		descuento1 = (precio * 10)/100;
-		descuento1 = parseInt(descuento1);
-		descuento2 = (precio * 15)/100;
-		descuento2 = parseInt(descuento2);
-		precioFinal = (precio-descuento1)-descuento2;
-	}		
-} 
+	descuento2 = (precio * 15)/100;
+	descuento2 = parseInt(descuento2);
 
-if(medioDePago == "Tarjeta" || medioDePago == "tarjeta")
-{
 	recargo = (precio * 10)/100;
 	recargo = parseInt(recargo);
-	precioFinal = precio+recargo;	
-}
-else if(medioDePago == "Efectivo" || medioDePago == "efectivo")
-{
-	precioFinal = precio;
-}
 
-alert("Total a pagar: $" + precioFinal);
+	medioDePago = prompt("¿Efectivo o Tarjeta?");
+
+	if(productos >= 2)
+	{
+		descuento1;
+		precioFinal = precio-descuento1;
+
+		if(precio >= 2000)
+		{
+			descuento1;
+			descuento2;
+			precioFinal = (precio-descuento1)-descuento2;
+		}		
+	} 
+
+	if(medioDePago == "Tarjeta" || medioDePago == "tarjeta")
+	{
+		recargo;
+		precioFinal = precio+recargo;	
+	}
+	else if(medioDePago == "Efectivo" || medioDePago == "efectivo")
+	{
+		precioFinal = precio;
+	}
+
+	alert("Total a pagar: $" + precioFinal);
 
 /*if(producto1 > 0 && producto2 > 0)
 {
