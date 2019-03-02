@@ -30,7 +30,6 @@ function mostrar()
 		respuesta = confirm("¿Desea continuar?.");	
 	}
 
-
 	document.getElementById('suma').value = positivo;
 	document.getElementById('producto').value = negativo;
 

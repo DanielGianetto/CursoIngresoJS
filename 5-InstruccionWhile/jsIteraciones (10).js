@@ -88,4 +88,5 @@ function mostrar()
 	}
 
 	document.write(mensajeP + mensajeN + mensajeCantP + mensajeCantN + mensajeCantCeros + mensajePares + mensajePromedioP + mensajePromedioN + mensajeDiferencia);
+
 }//FIN DE LA FUNCIÓN

@@ -1,12 +1,12 @@
 function mostrar()
 {
-	
-	var horaDelDia;
+
+	var hora;
 	var mensaje;
 
-	horaDelDia = laHora.value;
+	hora = document.getElementById('laHora').value;
 
-	switch(horaDelDia)
+	switch(hora)
 	{
 		case "6":
 		case "7":
@@ -28,12 +28,20 @@ function mostrar()
 			break;
 		default:
 			mensaje = "Es de noche.";
-			break;
+			if(mensaje == "Es de noche." && hora < 24 && hora >= 20)
+			{
+				mensaje = "A dormir!.";
+			}
+			else
+			{
+				if(hora > 24 || hora < 1)
+				{
+					mensaje = "La hora ingresada no es válida";
+				}
+			}
+		
 	}
-	if(horaDelDia > 24)
-	{
-		mensaje = "Hora invalida.";
-	}	
+
 	alert(mensaje);
 
 }

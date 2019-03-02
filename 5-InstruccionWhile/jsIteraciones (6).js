@@ -13,7 +13,7 @@ function mostrar()
 	while(contador < 5)
 	{
 		contador++;
-		num = prompt("Ingrese un numero.");
+		num = prompt("Ingrese un número.");
 		num = parseInt(num);
 		acumulador += num;
 	}

@@ -1,30 +1,32 @@
 function mostrar()
 {
 
-	var planetas;
+	var planeta;
 	var mensaje;
 
-	planetas = prompt("Ingrese un planeta: ");
+	planeta = prompt("Ingrese un planeta:");
 
-	switch(planetas)
+	switch(planeta)
 	{
 		case "mercurio":
 		case "venus":
-			mensaje = "Aca hace más calor.";
+			mensaje = "Acá hace más calor";
 			break;
 		case "tierra":
-			mensaje = "Aca vivimos nosotros.";
+			mensaje = "Acá vivimos";
 			break;
+		case "marte":
 		case "jupiter":
 		case "saturno":
 		case "urano":
 		case "neptuno":
-			mensaje = "Aca hace más frio.";
+			mensaje = "Acá hace más frio";
 			break;
 		default:
-			mensaje = "Planeta enano o no valido.";
+			mensaje = "Planeta enano o invalido";
 			break;
 	}
+
 	alert(mensaje);
 	
 }

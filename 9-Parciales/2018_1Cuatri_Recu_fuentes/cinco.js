@@ -39,9 +39,9 @@ switch(medioDePago)
 		break;		
 }
 
-promocion1 = (importe*promocion1)/100;
+promocion1 = (importe * promocion1) / 100;
 parseInt(promocion1);
-total = importe-promocion1;
+total = importe - promocion1;
 mensaje = total;
 
 switch(paquete)
@@ -62,9 +62,9 @@ switch(paquete)
 		break;
 }
 
-promocion2 = (importe*promocion2)/100;
+promocion2 = (importe * promocion2) / 100;
 parseInt(promocion2);
-total = (importe-promocion1)-promocion2;
+total = (importe - promocion1) - promocion2;
 mensaje = total;
 
 alert("El total a pagar es: $" + mensaje);
