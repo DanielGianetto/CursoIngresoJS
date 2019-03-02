@@ -17,15 +17,16 @@ function mostrar()
 		var num;
 		num = prompt("Ingrese un número.");
 		num = parseInt(num);
-		if(num <= minimo)
-		{
-			minimo = num;
-			minimo = parseInt(minimo);
-		}
-		else
+		console.log(num);
+		if(num > maximo)
 		{
 			maximo = num;
 			maximo = parseInt(maximo);
+		}
+		else
+		{
+			minimo = num;
+			minimo = parseInt(minimo);
 		}
 		respuesta = confirm("¿Desea continuar?.");	
 	}

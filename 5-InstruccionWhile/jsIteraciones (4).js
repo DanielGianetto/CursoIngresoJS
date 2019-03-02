@@ -7,7 +7,7 @@ function mostrar()
 
 	while(num < 0 || num > 9)
 	{
-		num = prompt("Ingrese un número.");
+		num = prompt("Intente de nuevo.");
 	}
 
 	document.getElementById('Numero').value = num;

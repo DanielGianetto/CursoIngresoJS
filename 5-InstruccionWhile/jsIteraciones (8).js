@@ -18,6 +18,7 @@ function mostrar()
 		contador++;
 		num = prompt("Ingrese un número.");
 		num = parseInt(num);
+		console.log(num);
 		if(num > 0)
 		{
 			positivo += num;

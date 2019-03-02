@@ -15,6 +15,7 @@ function mostrar()
 		contador++;
 		num = prompt("Ingrese un número.");
 		num = parseInt(num);
+		console.log(num);
 		acumulador += num;
 		respuesta = confirm("¿Desea continuar?.");	
 	}

@@ -3,12 +3,12 @@ function mostrar()
 
 var clave;
 
-clave = prompt("ingrese el número clave.");
-clave = "utn750";
+clave = prompt("Ingrese la clave.");
 
 while(clave != "utn750")
 {
-	clave = prompt("ingrese el número clave.");
+	console.log(clave);
+	clave = prompt("Intente otra vez.");
 }
 
 
