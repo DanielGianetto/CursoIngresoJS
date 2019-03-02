@@ -60,10 +60,10 @@ function mostrar()
 		}//cant pares.
 
 		if(numero == 0) 
-			{
-				cantCeros++;
-				mensajeCeros = ". Cantidad de ceros: " + cantCeros;
-			}//cant ceros.
+		{
+			cantCeros++;
+			mensajeCeros = ". Cantidad de ceros: " + cantCeros;
+		}//cant ceros.
 
 		if(numero > 0) 
 		{	
