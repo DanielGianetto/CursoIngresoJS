@@ -7,7 +7,7 @@ function mostrar()
 
 	while(sexo != "f" && sexo != "m")
 	{
-		sexo = prompt("Intente de nuevo.");
+		sexo = prompt("Intente de nuevo, recuerde f para femenino y m para masculino.");
 	}
 
 	document.getElementById('Sexo').value = sexo;

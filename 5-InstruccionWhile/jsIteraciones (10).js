@@ -6,20 +6,20 @@ function mostrar()
 	var respuesta;
 	var positivo;
 	var negativo;
-	var cantP;
-	var cantN;
+	var cantP; //Positivos
+	var cantN; //Negativos
 	var cantCeros;
 	var cantPares;
-	var promedioP;
-	var promedioN;
+	var promedioP; //Positivos
+	var promedioN; //Negativos
 	var diferencia;
-	var mensajeP;
-	var mensajeN;
-	var mensajeCantP;
-	var mensajeCantN;
+	var mensajeP; //Positivos
+	var mensajeN; //Negativos
+	var mensajeCantP; //Positivos
+	var mensajeCantN; //Negativos
 	var mensajePares;
-	var mensajePromedioP;
-	var mensajePromedioN;
+	var mensajePromedioP; //Positivos
+	var mensajePromedioN; //Negativos
 	var mensajeDiferencia;
 	
 
