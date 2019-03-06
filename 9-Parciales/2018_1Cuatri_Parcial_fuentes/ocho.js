@@ -1,99 +1,107 @@
 function mostrar()
 {
-
-	var numero;
 	var letra;
-	var respuesta;
+	var num;
+
 	var cantPares;
 	var cantImpares;
-	var cantCeros;
-	var acumulador;
-	var cantPositivos;
-	var promedio;
-	var acumuladorNegativo;
-	var numMax;
-	var letraMax;
-	var numMin;
-	var letraMin;
 	var mensajePares;
 	var mensajeImpares;
+
+	var cantCeros;
 	var mensajeCeros;
+
+	var cantPositivos;
+	var sumaPositivos;
+	var promedio;
 	var mensajePromedio;
+
+	var sumaNegativos;
+	var mensajeSumaNegativos;
+
+	var numMax;
+	var numMin;
+	var mensajeNumMax;
 	var mensajeNumMin;
 
-	respuesta = true;
+	var respuesta;
+
 	cantPares = 0;
 	cantImpares = 0;
 	cantCeros = 0;
-	acumulador = 0;
 	cantPositivos = 0;
-	acumuladorNegativo = 0;
-	numMax = 0;
-	numMin = 100;
+	sumaPositivos = 0;
+	sumaNegativos = 0;
+	numMax = -100;
+	numMin = 100
 
 	while(respuesta != false)
 	{
 		letra = prompt("Ingrese una letra:");
 		while(isNaN(letra) == false)
 		{
-			letra = prompt("Ingrese una letra valida:");
-		}//validar letra.
+			letra = prompt("Intente de nuevo:");
+		}
 		console.log(letra);
 
-		numero = prompt("Ingrese un número:");
-		numero = parseInt(numero);
-		while(isNaN(numero) == true || numero < -100 || numero > 100)
+		num = prompt("Ingrese una número:");
+		num = parseInt(num);
+		while(isNaN(num) == true || num < -100 || num > 100)
 		{
-			numero = prompt("Ingrese un número valido:");
-		}//validar número.
-		console.log(numero);
+			num = prompt("Intente de nuevo:");
+		}
+		console.log(num);
 
-		if(numero % 2 != 0)
+		if(num % 2 != 0)
 		{
 			cantImpares++;
-			mensajeImpares = ". Cantidad de números impares: " + cantImpares;
-		}//cant impares.
+			mensajeImpares = "Cantidad de impares: " + cantImpares;
+		}
 		else
 		{
 			cantPares++;
-			mensajePares = "Cantidad de números pares: " + cantPares;		
-		}//cant pares.
+			mensajePares = ". Cantidad de pares: " + cantPares;
+		}// A y B.
 
-		if(numero == 0) 
+		if(num == 0)
 		{
 			cantCeros++;
 			mensajeCeros = ". Cantidad de ceros: " + cantCeros;
-		}//cant ceros.
+		}// C.
 
-		if(numero > 0) 
-		{	
-			acumulador += numero;
+		if(num > 0)
+		{
+			sumaPositivos += num;
 			cantPositivos++;
-			promedio = acumulador / cantPositivos;
-			mensajePromedio = ". Promedio: " + promedio;
-		}//promedio de positivos.
+			promedio = sumaPositivos / cantPositivos;
+			mensajePromedio = ". Promedio de positivos: " + promedio;
+		}// D.
 
-		if(numero < 0)
+		if(num < 0)
 		{
-			acumuladorNegativo += numero;
-			mensajeSumaNegativos = ". Suma de negativos: " + acumuladorNegativo;
-		}//suma de negativos.
+			sumaNegativos += num;
+			mensajeSumaNegativos = ". Suma de negativos: " + sumaNegativos;
+		}// E.
 
-		while(numero < numMin)
+		if(num < numMin)
 		{
-			numMin = numero;
-			mensajeNumMin = ". Numero minimo y letra del numero minimo: " + numMin + letra;
-		}//numero min + letra.
-
-		while(numero > numMax)
+			numMin = num;
+			mensajeNumMin = ". Numero minimo y letra: " + numMin + letra;
+		}
+		else
 		{
-			numMax = numero;
-			mensajeNumMax = ". Numero maximo y letra del numero maximo: " + numMax + letra;
-		}//numero min + letra.
+			if(num > numMax)
+			{
+				numMax = num;
+				mensajeNumMax = ". Numero maximo y letra: " + numMax + letra;
+			}
+		}// F.
 
 		respuesta = confirm("¿Desea continuar?");
 	}
 
-	document.write(mensajePares + mensajeImpares  + mensajeCeros + mensajePromedio + mensajeSumaNegativos + mensajeNumMin + mensajeNumMax);
-
+	document.write(mensajeImpares + mensajePares + mensajeCeros + mensajePromedio + mensajeSumaNegativos + mensajeNumMin + mensajeNumMax);
 }
+
+
+

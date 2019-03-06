@@ -1,6 +1,5 @@
 function mostrar()
 {
-
 	var planeta;
 	var mensaje;
 
@@ -10,23 +9,22 @@ function mostrar()
 	{
 		case "mercurio":
 		case "venus":
-			mensaje = "Acá hace más calor";
+			mensaje = "Acá hace más calor.";
 			break;
 		case "tierra":
-			mensaje = "Acá vivimos";
+			mensaje = "Acá vivimos.";
 			break;
 		case "marte":
 		case "jupiter":
 		case "saturno":
 		case "urano":
 		case "neptuno":
-			mensaje = "Acá hace más frio";
+			mensaje = "Acá hace más frio.";
 			break;
 		default:
-			mensaje = "Planeta enano o invalido";
+			mensaje = "Planeta enano o no valido.";
 			break;
 	}
 
 	alert(mensaje);
-	
 }

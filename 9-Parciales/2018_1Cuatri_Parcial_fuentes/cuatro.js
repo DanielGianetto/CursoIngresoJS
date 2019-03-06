@@ -1,39 +1,37 @@
 function mostrar()
 {
-
 	var numA;
 	var numB;
-	var suma;
-	var resta;
 	var mensaje;
+	var resta;
+	var suma;
 
-	numA = prompt("Ingrese el número A: ");
+	numA = prompt("Ingrese el número A:");
 	numA = parseInt(numA);
-	numB = prompt("Ingrese el número B: ");
+	numB = prompt("Ingrese el número A:");
 	numB = parseInt(numB);
 
 	if(numA == numB)
 	{
-		mensaje = "El número A: " + numA + " y el número B: " + numB + " son iguales.";
-	}//si A y B son iguales.
+		mensaje = "Ambos numeros son iguales, número A: " + numA + " número B: " + numB;
+	}
 	else
-	{ 
-		if(numA < numB)
+	{
+		if(numA > numB)
 		{
-			suma = numA + numB;
-			mensaje = "El resultado de la suma de ambos es: " + suma;
-			if(suma > 10)
-			{
-				mensaje = "La suma es " + suma + " y supero el 10.";
-			}
+			resta = numA - numB;
+			mensaje = "El resultado de la resta es: " + resta;
 		}
 		else
 		{
-			resta = numA - numB;
-			mensaje = "El resultado de la resta de ambos es: " + resta;
+			suma = numA + numB;
+			mensaje = "El resultado de la suma es: " + suma;
+			if(suma > 10)
+			{
+				mensaje = "La suma es " + suma + " y supero el 10";
+			}
 		}
 	}
 
 	alert(mensaje);
-
 }

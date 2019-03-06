@@ -1,6 +1,5 @@
 function mostrar()
 {
-
 	var hora;
 	var mensaje;
 
@@ -26,22 +25,23 @@ function mostrar()
 		case "19":
 			mensaje = "Es de tarde.";
 			break;
-		default:
+		case "24":
 			mensaje = "Es de noche.";
-			if(mensaje == "Es de noche." && hora < 24 && hora >= 20)
-			{
-				mensaje = "A dormir!.";
+		default:
+			if(hora > 24 || hora < 1)
+			{	
+				mensaje = "Hora inválida, intente de nuevo.";
 			}
 			else
-			{
-				if(hora > 24 || hora < 1)
+			{ 
+				if(hora < 24)
 				{
-					mensaje = "La hora ingresada no es válida";
+					mensaje = "Es de noche, a dormir.";
 				}
 			}
-		
+			break;
+			
 	}
 
 	alert(mensaje);
-
 }

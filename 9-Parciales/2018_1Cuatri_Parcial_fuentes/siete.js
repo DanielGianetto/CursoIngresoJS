@@ -1,56 +1,55 @@
 function mostrar()
 {
-	
 	var nota;
 	var sexo;
 	var contador;
 	var acumulador;
 	var promedio;
 	var mensajePromedio;
-	var notaMasBaja;
+	var notaBaja;
 	var mensajeNotaBaja;
-	var contadorVarones;
-	var mensajeVarones;
+	var contadorMasDeSeis;
+	var mensajeMasDeSeis;
 
 	contador = 0;
 	acumulador = 0;
-	notaMasBaja = 10;
-	contadorVarones = 0;
+	notaBaja = 10;
+	contadorMasDeSeis = 0;
 
 	while(contador < 5)
 	{
-		nota = prompt("Ingrese una nota:");
+		nota = prompt("Ingrese la nota:");
 		nota = parseInt(nota);
 		contador++;
-		while(isNaN(nota) == true || nota < 0 || nota > 10)
+		while(isNaN(nota) == true || nota < 1 || nota > 10)
 		{
-			nota = prompt("Ingrese la nota otra vez.");
-		}//validad nota.
+			nota = prompt("Intente de nuevo:");
+		}
 		console.log(nota);
+
 		sexo = prompt("Ingrese f o m:");
 		while(isNaN(sexo) == false || sexo != "f" && sexo != "m")
 		{
-			sexo = prompt("Ingrese el sexo otra vez.");
-		}//validar sexo.
+			sexo = prompt("Intente de nuevo:");
+		}
 		console.log(sexo);
-		
+
 		promedio = (acumulador += nota) / contador;
-		mensajePromedio = "Promedio: " + promedio;
-		//promedio (a).
+		mensajePromedio = "Promedio de notas: " + promedio;
+		// A.
 
-		while(nota < notaMasBaja && sexo == "f" || nota < notaMasBaja && sexo == "m")
+		if(nota < notaBaja)
 		{
-			notaMasBaja = nota;
-			mensajeNotaBaja = ". Nota más baja: " + notaMasBaja + ". Sexo: " + sexo + ".";
-		}//nota más baja + sexo de la nota más baja (b).
+			notaBaja = nota;
+			mensajeNotaBaja = ". La nota más baja es: " + notaBaja + ". Sexo del alumno: " + sexo;
+		}// B.
 
-		if(nota >= 6 && sexo == "m")
+		if(nota >= 6)
 		{
-			contadorVarones++;
-			mensajeVarones = " Cant. de varones con nota mayor o igual a 6: " + contadorVarones + ".";
-		}//cant. de varones con nota mayor o igual a 6 (c).
+			contadorMasDeSeis++;
+			mensajeMasDeSeis = ". Cantidad de varones con nota mayor o igual a 6: " + contadorMasDeSeis;
+		}// C.
 	}
 
-	alert(mensajePromedio + mensajeNotaBaja + mensajeVarones);
-
+	alert(mensajePromedio + mensajeNotaBaja + mensajeMasDeSeis);
 }
